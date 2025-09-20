@@ -1,0 +1,49 @@
+.footer {
+  background: #141414;
+  color: #ffffff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  padding: 120px 20px 60px 20px; /* 120px em cima, 20px nas laterais e 60px embaixo */
+  margin: 0 auto; /* Centraliza o container */
+  display: grid; /* Usando grid para layout */
+  grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual */
+  gap: 100px;
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+.footer-texto {
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.33; /* 4/3 */
+  color: #a3a3a3;
+}
+
+.footer-contato li {
+  font-size: 2.25rem;
+  font-weight: bold; /* Deixa o texto em negrito */
+  line-height: 1.1; /* Ajusta o espaçamento entre as linhas */
+  color: #ffffff /* Cor branca para o texto */;
+  margin-bottom: 30px; /* Espaçamento entre os itens da lista */
+}
+.footer-contato a {
+  color: #ffffff; /* Cor branca para os links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+.footer-copy {
+  grid-column: 1 / -1; /* Faz o texto ocupar as duas colunas */
+  font-size: 1.125rem; /* 18px */
+  color: #8f8f8f;
+}
+
+@media (max-width: 800px) {
+  /* Tablet e dispositivos menores */
+  .footer-container {
+    grid-template-columns: 1fr; /* Uma coluna */
+    padding: 60px 20px;
+    gap: 40px;
+    text-align: center; /* Centraliza o texto */
+  }
+  .footer-copy {
+    font-size: 1rem; /* 16px */
+  }
+}

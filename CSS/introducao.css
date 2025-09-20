@@ -1,0 +1,70 @@
+.introducao {
+  max-width: 1200px; /*largura máxima da introdução*/
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /*4 partes para o texto, 8 partes para a imagem*/
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao h1 {
+  /*estilização do título da introdução*/
+  font-size: 4.5rem;
+  line-height: 1.125; /*altura da linha*/
+  margin-bottom: 30px; /*espaçamento abaixo do título*/
+  position: relative; /*para posicionar o detalhe*/
+}
+.introducao h1::before {
+  /*detalhe decorativo do título*/
+  content: ""; /*necessário para criar o elemento*/
+  display: block; /*faz o elemento ser um bloco*/
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute; /*posiciona o detalhe em relação ao título*/
+  top: -15px; /*ajusta a posição vertical do detalhe*/
+  left: -40px; /*ajusta a posição horizontal do detalhe*/
+  z-index: -1; /*coloca o detalhe atrás do título*/
+}
+
+.introducao p {
+  font-size: 1.5rem; /*tamanho da fonte*/
+  color: #525252;
+}
+
+@media (max-width: 1000px) {
+  /* deixando resposnsoivo - quando a tela for menor que 1000px*/
+  .introducao h1 {
+    /*estilização do título da introdução*/
+    font-size: 3rem; /*diminuindo o tamanho da fonte*/
+  }
+}
+
+@media (max-width: 800px) {
+  /* deixando resposnsoivo - quando a tela for menor que 800px*/
+  .introducao {
+    grid-template-columns: 1fr 1fr; /*2 partes para o texto, 2 partes para a imagem*/
+    gap: 40px; /*diminuindo o espaçamento entre os itens*/
+  }
+  .introducao h1 {
+    font-size: 2rem; /*diminuindo o tamanho da fonte*/
+  }
+  .introducao h1::before {
+    /*detalhe decorativo do título*/
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  /* deixando resposnsoivo - quando a tela for menor que 400px*/
+  .introducao {
+    grid-template-columns: 1fr; /* 1 parte, só o texto mesmo*/
+  }
+  .introducao img {
+    /*esconde a imagem*/
+    display: none; /*esconde a imagem da introdução*/
+  }
+}

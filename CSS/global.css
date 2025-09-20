@@ -1,0 +1,43 @@
+body {
+  /*estilização do corpo da página*/
+  font-family: "Fira Sans", Arial, sans-serif;
+  margin: 0px;
+  color: #141414;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove o espaço embaixo da imagem */
+}
+
+.subtitulo {
+  /*estilização do título da introdução*/
+  font-size: 8rem; /*tamanho da fonte*/
+  word-break: break-all; /*quebra a palavra, se necessário*/
+  line-height: 1; /*altura da linha*/
+  text-transform: uppercase; /*transforma o texto em maiúsculo*/
+  max-width: 4ch; /*limita a largura máxima do título*/
+}
+
+@media (max-width: 800px) {
+  /*tela menor que 800px*/
+  .subtitulo {
+    font-size: 3rem; /*tamanho da fonte*/
+    text-transform: capitalize; /*transforma a primeira letra em maiúsculo*/
+    max-width: initial !important; /*remove a largura máxima do título*/
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  max-width: 1200px; /*largura máxima do cabeçalho*/
+  padding: 40px 20px; /*espaçamento interno do cabeçalho*/
+  display: flex; /*alinha os itens na horizontal, 1 item ao lado do outro*/
+  justify-content: space-between; /*espaço entre os itens*/
+  align-items: center; /*alinha os itens verticalmente no centro*/
+  margin: 0 auto; /*centraliza o cabeçalho na página*/
+}
+
+.header-menu {
+  display: flex; /*alinha os itens na horizontal, 1 item ao lado do outro*/
+  flex-wrap: wrap; /*faz os itens quebrarem a linha, se necessário*/
+  gap: 10px; /*espaço entre os itens*/
+  justify-content: center; /*centraliza os itens do menu*/
+}
+.header-menu a {
+  font-size: 1.25rem; /*tamanho da fonte*/ /*Para calcular o rem, é preciso dividir o taamnho da fonte pelo tamanho da fonte do body (16px)*/
+  line-height: 1.35; /*altura da linha*/
+  padding: 10px 20px; /*espaçamento interno do link, caixa do botão*/
+  text-decoration: none; /*tira o sublinhado do link*/
+  color: #141414; /*cor do texto*/
+  display: block; /*faz o link ocupar toda a área do botão*/
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column; /*alinha os itens na vertical, 1 item em cima do outro*/
+    text-align: center; /*centraliza o texto*/
+    gap: 40px; /*espaço entre os itens*/
+    padding: 20px; /*espaçamento interno do cabeçalho*/
+  }
+  .header a {
+    background: #f5f5f5; /*cor de fundo do botão*/
+    border-radius: 4px; /*borda arredondada*/
+  }
+}
